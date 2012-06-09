@@ -1,0 +1,125 @@
+body {
+	font-family:"Helvetica Nueue", Helvetica, Arial;
+	font-weight:lighter;
+	font-size:14px;
+	text-shadow: 0 1px 0 white;	
+	color:#222;
+	line-height:25px;
+}
+h1 { font-size:35px; margin:10px 0;}
+h2 { font-size:30px; margin:8px 0;}
+.section {
+	width:1000px;
+	max-width:1920px;
+	margin: 0 auto;
+	height:800px;
+}
+.section-one {
+	background: url('libs/squares.png');
+}
+.playerWrapper {
+	width:46%;
+	height:96%;
+	margin:2%;
+	display:inline-block;
+	float:left;
+}
+.playerWrapper ul {
+	box-shadow: 0 0 5px 1px #333;
+}
+.playerWrapper ul li {
+	list-style-type:none;
+	height:auto;
+	font-size:20px;
+	background-color:rgb(220,220,220);
+	color:#222;
+	text-shadow:0 1px 0 white;
+}
+
+.playerWrapper ul li:not(:first-child) {
+	border-top: thin solid white;
+}
+.playerWrapper ul li:not(:last-child) {
+	border-bottom: thin solid #222;
+}
+.myProfile {
+	float:left;
+	display:inline-block;
+	width: 46%; 
+	margin:2%;
+}
+.formInput {
+	display:block;
+	padding:5px;
+	border:thin solid lightgrey;
+	font-size:20px;
+	background-color:rgba(0,0,0,.1);
+}
+.formInput:hover {
+	border-color:#222;
+}
+.formInput:focus {
+	background-color: white;
+}
+.formButton {
+	cursor:pointer;
+	width:auto;
+	padding:10px;
+	border:thin solid lightgrey;
+	background-color:#DDDDDD;
+	transition: .25s;
+}
+.formButton:hover {
+	border-color:#222;
+}
+.formButton:active {
+	background-color:white;
+	border-color:#222;
+}
+
+.playerWrapper li{
+	-webkit-transition: all .25s;
+}
+.playerWrapper li:hover{
+	background-color: white;
+}
+.playerWrapper li.selected {
+	background-color: #09f;
+}
+.playerWrapper .removeIcon:hover {
+	opacity:1 !important;
+	color:red;
+}
+.playerListItem {
+	width:95%;
+	height:95%;
+	padding:2.5%;
+	display:inline-block;
+}
+.playerListItem.selectedPlayer {
+	color:white;
+	text-shadow: 0 1px 0 black;
+}
+.invite {
+	padding: 20px;
+	display:none;
+	position:absolute;
+	box-shadow:0 0 20px 1px #0099FF;
+	width: 50%;
+	left:25%;
+	top:25%;
+	height: 100px;
+	margin:10px auto;
+	border: thin solid lightgrey;
+	background-color:white;
+}
+.invite span {
+	font-size:30px;
+	display:inline-block;
+	margin-bottom:30px;
+}
+.cancelBtn {
+	width: 200px;
+	height:20px;
+	font-size:15px;
+}

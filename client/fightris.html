@@ -1,0 +1,55 @@
+<head>
+	<title>
+		Fightris
+	</title>
+</head>
+<body>
+	<div class="section section-one">
+		<center><h1>Welcome to Fightris</h1></center>
+		<div class="lobby">
+			<h2 style="margin-left:2%;">Players</h2>
+			{{> lobby }}
+		</div>
+		{{> invite}}
+	</div>
+	<div class="opp">
+	</div>
+	<div class="home">
+	</div>
+</body>
+<template name="invite">
+	<div class="invite">
+		<center><span class="waitMsg"></span><br/>
+		<a class="cancelBtn formButton">
+			Cancel
+		</a>
+		</center>
+	</div>
+</template>
+<template name="lobby">
+	{{> playerList }}
+	{{> myProfile }}
+</template>
+<template name="playerList">
+	<div class="playerWrapper">
+		<ul>
+			{{#each players}}
+		      {{> player}}
+		    {{/each}}
+		</ul>
+	</div>
+</template>
+<template name="player">
+	<li>
+		<a class="playerListItem" id='{{ _id }}'>
+			{{ name }}
+		</a>
+	</li>
+</template>
+<template name="myProfile">
+	<div class="myProfile">
+		<input class="formInput" value="Enter your name..."/>
+		<br/>
+		<a class="formButton">Ok</a><a class="formButton" onclick="Players.remove({});">Clear</a>
+	</div>
+</template>
